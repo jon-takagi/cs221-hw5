@@ -17,3 +17,5 @@ The final call to `destroy_tree` was verified for correctness using Valgrind.
 I confirmed that after destroying the tree, all of its memory was freed.
 
 After destroying the tree, I create t2 and search for a key not in the tree. The program does not reach the assertion, so it correctly exits.
+
+This change is to allow me to use github with SSH.
