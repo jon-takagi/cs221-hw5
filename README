@@ -1,0 +1,19 @@
+The first part of the test creates a tree t and assigns children to it as in the example.
+            126
+           /   \
+          /     \
+        -5       12
+        / \     /
+      12   6    3
+          /
+         9
+The second part of the function tests the `path_to` function, except for the desired 'crash on invalid input' feature.
+Each of the example nodes gives the left most path. This was done by using a variant of a preorder traversal rather than an in-order traversal.
+
+The third part of the function tests the `node_at` function. A valid path returns the correct node, while an invalid path
+returns nullptr instead.
+
+The final call to `destroy_tree` was verified for correctness using Valgrind.
+I confirmed that after destroying the tree, all of its memory was freed.
+
+After destroying the tree, I create t2 and search for a key not in the tree. The program does not reach the assertion, so it correctly exits.
